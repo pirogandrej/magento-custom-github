@@ -1,0 +1,21 @@
+<div class="simplelink">
+   <?php
+      $links = $block->getLink();
+      if ($links) :
+   ?>
+      <ul>
+         <?php foreach ($links as $link) : ?>
+            <li>
+               <div class="simplelink-list">
+                  <a class="link-title" href="
+                      <?php echo
+                        $block->getUrl($link->getData('path'));
+                      ?>">
+                      <?php echo $link->getData('name') ?>
+                  </a>
+               </div>
+            </li>
+         <?php endforeach; ?>
+      </ul>
+   <?php endif; ?>
+</div>

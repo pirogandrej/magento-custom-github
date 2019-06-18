@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Custom\LoginAsCustomer\Api\LoginAsCustomerRepositoryInterface"
+                type="Custom\LoginAsCustomer\Model\LoginAsCustomerRepository"/>
+    <preference for="Custom\LoginAsCustomer\Api\Data\LoginAsCustomerInterface"
+                type="Custom\LoginAsCustomer\Model\LoginAsCustomer"/>
+    <preference for="Custom\LoginAsCustomer\Api\Data\LoginAsCustomerSearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults"/>
+    <virtualType name="Custom\LoginAsCustomer\Model\ResourceModel\LoginAsCustomer\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">custom_login_as_customer</argument>
+            <argument name="resourceModel" xsi:type="string">
+                Custom\LoginAsCustomer\Model\ResourceModel\LoginAsCustomer\Collection
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="custom_login_as_customer_grid_data_source" xsi:type="string">
+                    Custom\LoginAsCustomer\Model\ResourceModel\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

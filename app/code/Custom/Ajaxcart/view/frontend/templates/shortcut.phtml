@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    require(['Magento_Customer/js/customer-data'],function(customerData){
+        customerData.reload(["cart"],false);
+    });
+    jQuery('.minicart-wrapper').addClass('active');
+    jQuery('.minicart-wrapper a').first().addClass('active');
+    jQuery('.minicart-wrapper div').first().show(300);
+    setTimeout(function(){
+        jQuery('.minicart-wrapper a').first().removeClass('active');
+        jQuery('.minicart-wrapper div').first().hide(300);
+        jQuery('.minicart-wrapper').removeClass('active');
+    },<?php echo $this->getDelay(); ?>);
+</script>

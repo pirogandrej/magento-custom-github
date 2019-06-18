@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <container name="root" label="Root">
+        <block class="Custom\CmsMenu\Block\Adminhtml\Link\Edit\Tab\Page" name="adminhtml_link_edit_tab_page"/>
+        <block class="Magento\Backend\Block\Widget\Grid\Serializer" name="page_grid_serializer">
+            <arguments>
+                <argument name="grid_block" xsi:type="string">adminhtml_link_edit_tab_page</argument>
+                <argument name="callback" xsi:type="string">getSelectedPage</argument>
+                <argument name="input_element_name" xsi:type="string">page</argument>
+                <argument name="reload_param_name" xsi:type="string">page</argument>
+            </arguments>
+        </block>
+    </container>
+</layout>

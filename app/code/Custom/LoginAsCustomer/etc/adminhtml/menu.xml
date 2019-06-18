@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add action="custom/loginascustomer/index"
+             id="Custom::custom_login_as_customer"
+             module="Custom_LoginAsCustomer"
+             parent="Magento_Customer::customer"
+             resource="Custom_LoginAsCustomer::custom_login_as_customer"
+             sortOrder="9999"
+             title="Login As Customer"/>
+    </menu>
+</config>

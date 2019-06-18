@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <listingToolbar name="listing_top"></listingToolbar>
+    <columns name="sales_order_columns">
+        <actionsColumn name="login_as_customer"
+                       class="Custom\LoginAsCustomer\Ui\Component\Listing\Column\OrderAction">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Login As Customer</item>
+                    <item name="indexField" xsi:type="string">entity_id</item>
+                    <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>
+                    <item name="fieldClass" xsi:type="string">login-as-customer-class</item>
+                    </item>
+            </argument>
+        </actionsColumn>
+    </columns>
+</listing>

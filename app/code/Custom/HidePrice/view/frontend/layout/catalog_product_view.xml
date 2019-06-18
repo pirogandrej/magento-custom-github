@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Custom_HidePrice::css/style.css" />
+	</head>
+	<referenceBlock name='product.info'>
+		<action method='setTemplate'>
+			<argument name='template' xsi:type='string'>Custom_HidePrice::product/view/form.phtml</argument>
+		</action>
+	</referenceBlock>
+</page>
+
+

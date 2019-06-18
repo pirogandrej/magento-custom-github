@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Custom_CmsMenu::main_menu"
+                title="CMS Menu"
+                module="Custom_CmsMenu"
+                sortOrder="50"
+                resource="Custom_CmsMenu::main_menu"
+        />
+        <add
+                id="Custom_CmsMenu::add_row"
+                title="Links CMS Page"
+                module="Custom_CmsMenu"
+                sortOrder="20"
+                parent="Custom_CmsMenu::main_menu"
+                action="cmsadmin/link/index"
+                resource="Custom_CmsMenu::add_row"
+        />
+    </menu>
+</config>

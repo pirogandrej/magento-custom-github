@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Custom_CmsMenu::css/style.css" />
+    </head>
+    <body>
+        <referenceContainer name="main">
+            <container name="content.top" label="Main Content Top">
+                <block class="Custom\CmsMenu\Block\Fronthtml\Link" name="front.link" template="Custom_CmsMenu::link.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

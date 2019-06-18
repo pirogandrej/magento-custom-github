@@ -1,0 +1,14 @@
+<?php
+    $imageUrl     = $block->getImageUrl();
+    $categoryName = $block->getCategoryName();
+    $cssClass     = $block->getCssClass();
+    if ( $imageUrl )
+    {
+?>
+    <div class="<?php echo $cssClass ?>">
+        <p><b>Current category</b> : <?php echo $categoryName ?></p>
+        <img src="<?php echo $imageUrl ?>" alt="<?php echo $categoryName ?>" title="<?php echo $categoryName ?>"/>
+    </div>
+<?php
+    }
+?>
